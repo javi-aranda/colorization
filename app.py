@@ -40,9 +40,10 @@ def colorize_image(image, net):
     return (colorized * 255).astype("uint8")
 
 def main():
+    st.set_page_config(page_title='Colorize It!', page_icon="🖌️", layout="centered")
     st.title("Black and White Image Colorizer")
     
-    uploaded_file = st.file_uploader("Choose a black and white image...", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Choose a black and white image...", type=["jpg", "jpeg", "png"], )
     
     if uploaded_file:
         image = Image.open(uploaded_file)
